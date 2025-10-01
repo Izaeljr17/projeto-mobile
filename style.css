@@ -109,6 +109,10 @@ body {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card:hover {
@@ -118,15 +122,19 @@ body {
 
 .card img {
   width: 100%;
-  height: auto;
+  max-height: 200px;  
+  object-fit: contain; 
   border-radius: 6px;
   margin-bottom: 15px;
+  background: #fff;   
+  padding: 5px;       
 }
 
 .card h2 {
   font-size: 18px;
   margin-bottom: 10px;
   color: #222;
+  min-height: 40px;
 }
 
 .card .preco {
@@ -146,11 +154,13 @@ body {
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s;
+  margin-top: auto;
 }
 
 .card button:hover {
   background: #e45500;
 }
+
 
 footer {
   text-align: center;
